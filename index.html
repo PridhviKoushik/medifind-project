@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MediFind Medicine Search</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 40px;}
+    .container { max-width: 500px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 12px #ccc;}
+    input, button { padding: 10px; margin: 5px 0; width: 100%; }
+    .results { margin-top: 20px; }
+    .card { background: #e7f3ff; padding: 12px; border-radius: 5px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>MediFind</h1>
+    <label for="search">Enter Medicine Name:</label>
+    <input type="text" id="search" placeholder="e.g. Insulin">
+    <button onclick="searchMedicine()">Search</button>
+    <div class="results" id="results"></div>
+  </div>
+  <script>
+    function searchMedicine() {
+      const medicine = document.getElementById("search").value;
+      fetch(`http://localhost:5000/api/search?medicine=${encodeURIComponent(medicine)}`)
+        .then(response => response.json())
+        .then(data => {
+          const resultsDiv = document.getElementById("results");
+          if (data.results.length === 0) {
+            resultsDiv.innerHTML = "<p>No matching pharmacies found.</p>";
+          } else {
+            resultsDiv.innerHTML = '';
+            data.results.forEach(item => {
+              resultsDiv.innerHTML += `
+                <div class="card">
+                  <strong>Pharmacy:</strong> ${item.pharmacyName}<br>
+                  <strong>Address:</strong> ${item.address}<br>
+                  <strong>Medicine:</strong> ${item.medicine}<br>
+                  <strong>In Stock:</strong> ${item.inStock ? "Yes" : "No"}<br>
+                  <strong>Price:</strong> ₹${item.price}/-
+                </div>
+              `;
+            });
+          }
+        });
+    }
+  </script>
+</body>
+</html>

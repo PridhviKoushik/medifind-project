@@ -1,0 +1,48 @@
+{
+"pharmacies": [
+{
+"id": 1,
+"name": "CarePlus Pharmacy",
+"address": "Park Street, Kolkata",
+"lat": 22.5600,
+"lng": 88.3630,
+"stock": [
+{ "name": "Paracetamol 500mg", "availability": "in_stock", "price": 25 },
+{ "name": "Cough Syrup 100ml", "availability": "limited", "price": 85 }
+]
+},
+{
+"id": 2,
+"name": "HealthMart",
+"address": "Salt Lake, Kolkata",
+"lat": 22.5790,
+"lng": 88.4320,
+"stock": [
+{ "name": "Paracetamol 500mg", "availability": "limited", "price": 30 },
+{ "name": "Ibuprofen 200mg", "availability": "in_stock", "price": 40 }
+]
+},
+{
+"id": 3,
+"name": "CityCare Pharmacy",
+"address": "Camac Street, Kolkata",
+"lat": 22.5568,
+"lng": 88.3548,
+"stock": [
+{ "name": "Amoxicillin 500mg", "availability": "out", "price": 120 },
+{ "name": "Paracetamol 500mg", "availability": "out", "price": 28 }
+]
+},
+{
+"id": 4,
+"name": "Neighborhood Pharmacy",
+"address": "Taltala, Kolkata",
+"lat": 22.5590,
+"lng": 88.3600,
+"stock": [
+{ "name": "Cough Syrup 100ml", "availability": "in_stock", "price": 80 }
+]
+}
+]
+}
+

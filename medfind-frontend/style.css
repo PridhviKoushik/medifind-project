@@ -1,0 +1,11 @@
+body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+#results .list-group-item { cursor: pointer; }
+.badge-available { background-color: #198754; color: #fff; padding: 3px 8px; border-radius: 6px; font-weight: bold; }
+.badge-out { background-color: #dc3545; color: #fff; padding: 3px 8px; border-radius: 6px; font-weight: bold; }
+.badge-unknown { background-color: #6c757d; color: #fff; padding: 3px 8px; border-radius: 6px; font-weight: bold; }
+#mapPreview img { width:100%; height:300px; object-fit:cover; border-radius:6px; }
+.card-pharmacy { background: linear-gradient(90deg, #e0eaff 0%, #f9fafe 100%); box-shadow: 0 2px 12px #00000011; border-radius: 12px; margin-bottom: 12px; padding:20px; }
+.card-pharmacy h5 { font-weight: bold; margin-bottom: 8px; }
+.card-pharmacy p { margin: 0; }
+.card-pharmacy .address { font-size: 0.9em; color: #555; }
+.card-pharmacy .status { margin-top: 10px; }
